@@ -88,7 +88,8 @@ namespace ChatBot
                     Console.WriteLine("Goodbye, " + userName + "! Stay safe online.");
                     break;
                 }
-
+                
+                RespondToInput(input);
                 
             }
         }
