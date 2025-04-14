@@ -14,7 +14,7 @@ namespace ChatBot
             // Play voice greeting
             try
             {
-                SoundPlayer player = new SoundPlayer(@"");
+                SoundPlayer player = new SoundPlayer(@"C:\Users\Sithobile Mkhabela\OneDrive\Documentos\IIE MSA\2025\Semester 1\PROG6221\PROG6221_POE_PART1_ST10448774\ChatBot\bin\Debug\VoiceAudio.wav");
                 player.Load();
                 player.PlaySync();
             }
