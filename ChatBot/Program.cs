@@ -178,7 +178,7 @@ namespace ChatBot
                 Console.WriteLine("Password safety means using good habits to protect your accounts and sensitive information.\n");
                 
             }
-            else if ((input.Contains("practice") || (input.Contains("practices") || input.Contains("how") || input.Contains("precautions")) && input.Contains("password"))
+            else if (input.Contains("practice") || (input.Contains("practices") || input.Contains("how") || input.Contains("precautions")) && input.Contains("password"))
             {
                 Console.WriteLine("Password safety practices include:");
                 Console.WriteLine("- Use strong, complex passwords");
@@ -191,7 +191,7 @@ namespace ChatBot
                 Console.WriteLine("Safe browsing is using tools and habits that protect you from online threats.\n");
                 
             }
-            else if ((input.Contains("practice") || input.Contains("practices") && input.Contains("safe browsing"))
+            else if (input.Contains("practice") || input.Contains("practices") && input.Contains("safe browsing"))
             {
                 Console.WriteLine("Safe browsing practices include:");
                 Console.WriteLine("- Keep antivirus software updated");
