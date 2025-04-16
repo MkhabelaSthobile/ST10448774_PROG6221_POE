@@ -1,0 +1,195 @@
+[1mdiff --git a/ChatBot/Program.cs b/ChatBot/Program.cs[m
+[1mindex e0ea5e6..de47f18 100644[m
+[1m--- a/ChatBot/Program.cs[m
+[1m+++ b/ChatBot/Program.cs[m
+[36m@@ -7,12 +7,12 @@[m [mnamespace ChatBot[m
+ {[m
+     class Program[m
+     {[m
+[31m-        [m
+[32m+[m[41m[m
+         static string userName;[m
+ [m
+         static void Main(string[] args)[m
+         {[m
+[31m-            [m
+[32m+[m[41m[m
+             // Logo[m
+             Console.ForegroundColor = ConsoleColor.Cyan;[m
+             Console.WriteLine(@"[m
+[36m@@ -55,14 +55,14 @@[m [mnamespace ChatBot[m
+             //Welcome message[m
+             Console.WriteLine("\n<<<<<<<<<<  Welcome to the Cybersecurity Chatbot!  >>>>>>>>>>");[m
+             Console.WriteLine();[m
+[31m-            [m
+[32m+[m[41m[m
+             Console.Write("\nEnter your username: ");[m
+             Console.ForegroundColor = ConsoleColor.Yellow;[m
+             userName = Console.ReadLine().Trim() ?? "User";[m
+             Console.ResetColor();[m
+             TypeWrite("Nice to meet you, " + userName + "!", 30);[m
+             Console.WriteLine();[m
+[31m-            [m
+[32m+[m[41m[m
+             StartChat();[m
+ [m
+         }[m
+[36m@@ -92,7 +92,7 @@[m [mnamespace ChatBot[m
+                     continue;[m
+                 }[m
+ [m
+[31m-                input = input.ToLower(); [m
+[32m+[m[32m                input = input.ToLower();[m[41m[m
+ [m
+                 if (input == "exit" || input == "bye")[m
+                 {[m
+[36m@@ -104,9 +104,9 @@[m [mnamespace ChatBot[m
+                     Console.ResetColor();[m
+                     break;[m
+                 }[m
+[31m-                [m
+[32m+[m[41m[m
+                 RespondToInput(input);[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+         }[m
+ [m
+[36m@@ -117,12 +117,12 @@[m [mnamespace ChatBot[m
+             if (input.Contains("hey") || input.Contains("hello"))[m
+             {[m
+                 Console.WriteLine("Hey there!\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if (input.Contains("how are you"))[m
+             {[m
+                 Console.WriteLine("I'm as good as a chatbot can be. How are you?\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if (input.Contains("good") || input.Contains("great") || input.Contains("amazing") || input.Contains("fine"))[m
+             {[m
+[36m@@ -132,27 +132,27 @@[m [mnamespace ChatBot[m
+             else if (input.Contains("not good") || input.Contains("bad") || input.Contains("sad") || input.Contains("angry"))[m
+             {[m
+                 Console.WriteLine("I'm sorry to hear that. How can I make your day better?\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if (input.Contains("your purpose") || input.Contains("what do you do") || input.Contains("help"))[m
+             {[m
+                 Console.WriteLine("I'm here to help you stay safe online. You can ask me about cybersecurity.\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if ((input.Contains("what can") && input.Contains("ask")) || input.Contains("topics"))[m
+             {[m
+                 Console.WriteLine("You can ask me about phishing, password safety, or safe browsing.\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if ((input.Contains("define") || input.Contains("what is") || input.Contains("about")) && input.Contains("cybersecurity"))[m
+             {[m
+                 Console.WriteLine("Cybersecurity is the practice of protecting systems, networks, and data from digital attacks.\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if ((input.Contains("define") || input.Contains("what is") || input.Contains("about")) && input.Contains("phishing"))[m
+             {[m
+                 Console.WriteLine("Phishing is a cyberattack where attackers impersonate trusted entities to trick people into revealing sensitive information.\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if ((input.Contains("how") || input.Contains("safe") || input.Contains("precautions")) && input.Contains("phishing"))[m
+             {[m
+[36m@@ -161,7 +161,7 @@[m [mnamespace ChatBot[m
+                 Console.WriteLine("- Use strong, unique passwords");[m
+                 Console.WriteLine("- Enable multi-factor authentication");[m
+                 Console.WriteLine("- Avoid clicking on suspicious links or email attachments\n");[m
+[31m-               [m
+[32m+[m[41m[m
+             }[m
+             else if (input.Contains("types") || input.Contains("examples") && input.Contains("phishing"))[m
+             {[m
+[36m@@ -171,12 +171,12 @@[m [mnamespace ChatBot[m
+                 Console.WriteLine("- Smishing (SMS phishing)");[m
+                 Console.WriteLine("- Vishing (voice phishing)");[m
+                 Console.WriteLine("- Clone phishing\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if ((input.Contains("define") || input.Contains("what is")) && input.Contains("password safety"))[m
+             {[m
+                 Console.WriteLine("Password safety means using good habits to protect your accounts and sensitive information.\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if (input.Contains("practice") || (input.Contains("practices") || input.Contains("how") || input.Contains("precautions")) && input.Contains("password"))[m
+             {[m
+[36m@@ -184,12 +184,12 @@[m [mnamespace ChatBot[m
+                 Console.WriteLine("- Use strong, complex passwords");[m
+                 Console.WriteLine("- Avoid writing down or sharing passwords");[m
+                 Console.WriteLine("- Use a password manager\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if ((input.Contains("what is") || input.Contains("safe browsing")) && input.Contains("safe"))[m
+             {[m
+                 Console.WriteLine("Safe browsing is using tools and habits that protect you from online threats.\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if (input.Contains("practice") || input.Contains("practices") && input.Contains("safe browsing"))[m
+             {[m
+[36m@@ -198,7 +198,7 @@[m [mnamespace ChatBot[m
+                 Console.WriteLine("- Check that website URLs are correct");[m
+                 Console.WriteLine("- Use HTTPS-secured sites");[m
+                 Console.WriteLine("- Don't click suspicious links or ads\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else if (input.Contains("tools") && input.Contains("safe browsing"))[m
+             {[m
+[36m@@ -206,12 +206,12 @@[m [mnamespace ChatBot[m
+                 Console.WriteLine("- Google Safe Browsing (used by Chrome and Firefox)");[m
+                 Console.WriteLine("- Microsoft Defender SmartScreen (used by Edge)");[m
+                 Console.WriteLine("- Antivirus software with web protection features\n");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+             else[m
+             {[m
+                 Console.WriteLine("Hmm... I didn’t quite understand that. Can you rephrase?");[m
+[31m-                [m
+[32m+[m[41m[m
+             }[m
+ [m
+             Console.ResetColor();[m
+[1mdiff --git a/ChatBot/bin/Debug/ChatBot.exe b/ChatBot/bin/Debug/ChatBot.exe[m
+[1mindex f82b1a4..5d41ee1 100644[m
+Binary files a/ChatBot/bin/Debug/ChatBot.exe and b/ChatBot/bin/Debug/ChatBot.exe differ
+[1mdiff --git a/ChatBot/bin/Debug/ChatBot.pdb b/ChatBot/bin/Debug/ChatBot.pdb[m
+[1mindex 96b5ebe..b41f5dc 100644[m
+Binary files a/ChatBot/bin/Debug/ChatBot.pdb and b/ChatBot/bin/Debug/ChatBot.pdb differ
+[1mdiff --git a/ChatBot/obj/Debug/ChatBot.csproj.FileListAbsolute.txt b/ChatBot/obj/Debug/ChatBot.csproj.FileListAbsolute.txt[m
+[1mindex 3f65ec5..6902376 100644[m
+[1m--- a/ChatBot/obj/Debug/ChatBot.csproj.FileListAbsolute.txt[m
+[1m+++ b/ChatBot/obj/Debug/ChatBot.csproj.FileListAbsolute.txt[m
+[36m@@ -5,3 +5,10 @@[m [mC:\Users\Sithobile Mkhabela\OneDrive\Documentos\IIE MSA\2025\Semester 1\PROG6221[m
+ C:\Users\Sithobile Mkhabela\OneDrive\Documentos\IIE MSA\2025\Semester 1\PROG6221\PROG6221_POE_PART1_ST10448774\ChatBot\obj\Debug\ChatBot.csproj.CoreCompileInputs.cache[m
+ C:\Users\Sithobile Mkhabela\OneDrive\Documentos\IIE MSA\2025\Semester 1\PROG6221\PROG6221_POE_PART1_ST10448774\ChatBot\obj\Debug\ChatBot.exe[m
+ C:\Users\Sithobile Mkhabela\OneDrive\Documentos\IIE MSA\2025\Semester 1\PROG6221\PROG6221_POE_PART1_ST10448774\ChatBot\obj\Debug\ChatBot.pdb[m
+[32m+[m[32mC:\Users\Sithobile Mkhabela\source\repos\ST10448774_PROG6221_POE\ChatBot\bin\Debug\ChatBot.exe.config[m[41m[m
+[32m+[m[32mC:\Users\Sithobile Mkhabela\source\repos\ST10448774_PROG6221_POE\ChatBot\bin\Debug\ChatBot.exe[m[41m[m
+[32m+[m[32mC:\Users\Sithobile Mkhabela\source\repos\ST10448774_PROG6221_POE\ChatBot\bin\Debug\ChatBot.pdb[m[41m[m
+[32m+[m[32mC:\Users\Sithobile Mkhabela\source\repos\ST10448774_PROG6221_POE\ChatBot\obj\Debug\ChatBot.csproj.AssemblyReference.cache[m[41m[m
+[32m+[m[32mC:\Users\Sithobile Mkhabela\source\repos\ST10448774_PROG6221_POE\ChatBot\obj\Debug\ChatBot.csproj.CoreCompileInputs.cache[m[41m[m
+[32m+[m[32mC:\Users\Sithobile Mkhabela\source\repos\ST10448774_PROG6221_POE\ChatBot\obj\Debug\ChatBot.exe[m[41m[m
+[32m+[m[32mC:\Users\Sithobile Mkhabela\source\repos\ST10448774_PROG6221_POE\ChatBot\obj\Debug\ChatBot.pdb[m[41m[m
+[1mdiff --git a/ChatBot/obj/Debug/ChatBot.exe b/ChatBot/obj/Debug/ChatBot.exe[m
+[1mindex f82b1a4..5d41ee1 100644[m
+Binary files a/ChatBot/obj/Debug/ChatBot.exe and b/ChatBot/obj/Debug/ChatBot.exe differ
+[1mdiff --git a/ChatBot/obj/Debug/ChatBot.pdb b/ChatBot/obj/Debug/ChatBot.pdb[m
+[1mindex 96b5ebe..b41f5dc 100644[m
+Binary files a/ChatBot/obj/Debug/ChatBot.pdb and b/ChatBot/obj/Debug/ChatBot.pdb differ
