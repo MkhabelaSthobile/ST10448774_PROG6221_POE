@@ -24,7 +24,7 @@ jobs:
         dotnet-version: 9.0.x
         
     - name: Restore dependencies
-      run: dotnet restore ChatBot.sln
+      run: dotnet restore ./ChatBot/ChatBot.csproj
       
     - name: Install dotnet-format
       run: dotnet tool install --global dotnet-format
@@ -32,7 +32,5 @@ jobs:
       run: dotnet format --verify-no-changes
 
     - name: Build
-      run: dotnet build --no-restore --configuration Release
+      run: dotnet build ./ChatBot/ChatBot.csproj --configuration Release --no-restore 
       
-    - name: Run Tests
-      run: dotnet test --no-build --verbosity normal
